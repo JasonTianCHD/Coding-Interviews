@@ -1,13 +1,13 @@
 //求连续最大子数组的和
 //测试用例：NULL指针；正负；全正；全负；
 
-bool Invalid_Input = false;
+bool Invalid_Input = false;//设置flag判断无效输入
 
 int FindGreatestSumOfSubArray(int *pData, int nlength)
 {
     if(（*pData = NULL） || （nlength <= 0)）//一定要考虑特殊情况！
     {
-        Invalid_Input = true; //区别无效输出的0和正常求和输出的0
+        Invalid_Input = true; //区别无效输入输出的0和正常求和输出的0
         return 0;
     }
     
