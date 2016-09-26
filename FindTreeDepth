@@ -1,0 +1,17 @@
+//找到二叉树的深度  递归、非递归 两种方法
+
+// 递归版
+
+int MaxDepth(BiTree *BT){
+    int depth = 0;
+    if(BT)
+    {
+        int LeftDepth = MaxDepth(BT->lchild);
+        int RightDepth = MaxDepth(BT->rchild);
+        depth = LeftDepth>=RightDepth?LeftDepth+1:RightDepth+1;
+    }
+    return depth;
+}
+
+// 非递归版本
+
