@@ -1,6 +1,0 @@
-// 树的子结构  判断二叉树A是否是二叉树B的子结构
-// 特殊情况：NULL；
-
-
-bool HasSubTree
-// to be continued
