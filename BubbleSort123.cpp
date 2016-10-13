@@ -14,12 +14,13 @@ void BubbleSort(int a[], int n){
 void BubbleSort(int a[], int n){  
     int i,j;
     for(i=0; i<n; i++){
-        flag = false;
-        for(j=1; j<n-1; j++)
+        int flag = false;
+        for(j=1; j<n-i; j++){
             if(a[j-1] > a[j]){
                 swap(a[j-1],a[j]);
                 flag = true;
-                }
+            }
+        }
         if(flag == false)
             return;
    }
@@ -30,5 +31,16 @@ void BubbleSort(int a[], int n){
 
 void BubbleSort(int a[],int n){
     int i,j;
+    int flag = n;//设置标志位
     
+    while(flag>0){
+        i = flag;
+        flag = 0;//如果有序，则for循环后flag=0.直接退出
+        for(j=1; j<i; j++){
+            if(a[j-1]>a[j]){
+                swap(a[j-1],a[j]);
+                flag = j;//不停的更新flag，记录最后一个发生交换的位置
+            }
+        }
+    }   
 }
