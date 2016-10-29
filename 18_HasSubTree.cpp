@@ -30,3 +30,4 @@ struct TreeNode{
             return false;
         return DoesTree1HaveTree2(pRoot1->left,pRoot2->left) && DoesTree1HaveTree2(pRoot1->right,pRoot2->right);
     }
+ 
